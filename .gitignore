@@ -1,0 +1,5 @@
+# Claude Design handoff bundle artifacts (kept locally, not deployed)
+design_raw.html
+design_decoded.html
+shishi/
+.DS_Store
