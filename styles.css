@@ -46,7 +46,7 @@
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 
-html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; overflow-x: hidden; width: 100%; }
 @media (max-width: 1000px) { body { padding-bottom: 76px; } }
 
 body {
@@ -828,6 +828,11 @@ body[data-hero="split"] .wm-half.right { justify-self: start; }
 .reveal[data-rv="right"] { transform: translateX(46px); }
 .reveal[data-rv="scale"] { transform: translateY(26px) scale(.96); }
 .reveal[data-rv="left"].in, .reveal[data-rv="right"].in, .reveal[data-rv="scale"].in { transform: none; }
+/* on narrow screens these elements are full-width, so a sideways slide would
+   push past the viewport edge and create horizontal scroll — slide up instead */
+@media (max-width: 1000px) {
+  .reveal[data-rv="left"], .reveal[data-rv="right"] { transform: translateY(34px); }
+}
 /* stagger children of a revealed group */
 .reveal-stagger > * { opacity: 0; transform: translateY(26px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
 .reveal-stagger.in > * { opacity: 1; transform: none; }
