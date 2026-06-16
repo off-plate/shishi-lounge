@@ -4,12 +4,29 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <meta name="theme-color" content="#0d0a08" />
-<title>ShiShi Lounge — Hookah Bar Prague</title>
+<title>ShiShi Lounge — Hookah Bar in Prague</title>
+<meta name="description" content="ShiShi Lounge is a candle-lit hookah bar in the heart of Prague. 40+ flavours, signature cocktails, a brick cellar and board games. Open till 2 AM. Malá Štěpánská 19, Praha 2." />
+<link rel="canonical" href="https://off-plate.github.io/shishi-lounge/" />
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="ShiShi Lounge — Hookah Bar in Prague" />
+<meta property="og:description" content="Candle-lit hookah bar in Prague. 40+ flavours, cocktails, a brick cellar and board games. Open till 2 AM." />
+<meta property="og:url" content="https://off-plate.github.io/shishi-lounge/" />
+<meta property="og:image" content="https://off-plate.github.io/shishi-lounge/images/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<link rel="apple-touch-icon" href="images/favicon.png" />
+
+<!-- Fonts: preconnect + non-render-blocking load -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,700&family=Berkshire+Swash&family=Oswald:wght@400;500;600;700&family=Teko:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="icon" type="image/png" href="images/logo.png" />
-<link rel="stylesheet" href="styles.css?v=11" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,700&family=Berkshire+Swash&family=Oswald:wght@400;500;600;700&family=Teko:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,700&family=Berkshire+Swash&family=Oswald:wght@400;500;600;700&family=Teko:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+
+<link rel="preload" as="image" href="images/hookah.webp" fetchpriority="high" />
+<link rel="stylesheet" href="styles.css?v=12" />
 </head>
 <body data-hero="centered">
 
@@ -19,7 +36,7 @@
 <!-- ===================== NAV ===================== -->
 <nav class="nav">
   <a class="brand" href="#home">
-    <span class="brand-badge"><img src="images/logo-mark.png" alt="ShiShi Lounge logo" /></span>
+    <span class="brand-badge"><img src="images/logo-mark.png" alt="ShiShi Lounge logo" width="160" height="160" decoding="async" /></span>
     <span class="brand-name"><b>SHISHI</b><small>Lounge · Praha</small></span>
   </a>
   <div class="nav-links">
@@ -58,19 +75,21 @@
 </div>
 
 <!-- ===================== PARTICLES LAYER ===================== -->
-<div id="particles"></div>
+<div id="particles" aria-hidden="true"></div>
 
+<main>
 <!-- ===================== HERO ===================== -->
 <header class="hero" id="home" data-screen-label="Hero">
-  <div class="hero-scatter" id="heroScatter"></div>
+  <div class="hero-scatter" id="heroScatter" aria-hidden="true"></div>
 
   <div class="hero-inner">
-    <div class="wordmark-row">
+    <h1 class="visually-hidden">ShiShi Lounge — Hookah Bar in Prague</h1>
+    <div class="wordmark-row" aria-hidden="true">
       <span class="wm-half left">SHI</span>
       <div class="hero-centerpiece">
         <div class="centerpiece-glow"></div>
         <div class="smoke"></div>
-        <div class="hookah-art"><img src="images/hookah.png" alt="ShiShi Lounge hookah" /></div>
+        <div class="hookah-art"><img src="images/hookah.webp" alt="ShiShi Lounge hookah" width="417" height="641" fetchpriority="high" decoding="async" /></div>
       </div>
       <span class="wm-half right">SHI<span class="wm-script">Lounge</span></span>
     </div>
@@ -105,7 +124,7 @@
       <div style="margin-top:36px"><a href="#reserve" class="btn btn-primary"><span data-i18n="about.btn">Book your spot</span> <span class="arrow">↗</span></a></div>
     </div>
     <div class="about-visual reveal" data-rv="right">
-      <div class="ph" id="about-1"><img src="images/about-1.webp" alt="ShiShi Lounge interior" loading="lazy" /></div>
+      <div class="ph" id="about-1"><img src="images/about-1.webp" alt="ShiShi Lounge interior" loading="lazy" width="1100" height="1695" decoding="async" /></div>
       <div class="badge-float"><b>Praha 2</b><span>Malá Štěpánská 19</span></div>
     </div>
   </div>
@@ -130,25 +149,25 @@
       <h3 class="section-title" style="font-size:clamp(28px,3.6vw,46px);margin:12px 0 26px" data-i18n="menu.recTitle">Our recommendations</h3>
       <div class="menu-feature reveal-stagger">
         <div class="feat-card">
-          <div class="ph"><img src="images/ev2.webp" alt="Hookah in the cellar" loading="lazy" /></div>
+          <div class="ph"><img src="images/ev2.webp" alt="Hookah in the cellar" loading="lazy" width="1100" height="825" decoding="async" /></div>
           <h4 data-i18n="feat1.name">Signature ShiShi Blend</h4>
           <div class="fc-sub" data-i18n="feat1.sub">House hookah · double apple &amp; mint</div>
           <div class="fc-price">590 Kč</div>
         </div>
         <div class="feat-card">
-          <div class="ph"><img src="images/g2.webp" alt="Bar & cocktails" loading="lazy" /></div>
+          <div class="ph"><img src="images/g2.webp" alt="Bar & cocktails" loading="lazy" width="1100" height="733" decoding="async" /></div>
           <h4 data-i18n="feat2.name">Smoke &amp; Mirrors</h4>
           <div class="fc-sub" data-i18n="feat2.sub">Mezcal · ginger · chilli</div>
           <div class="fc-price">245 Kč</div>
         </div>
         <div class="feat-card">
-          <div class="ph"><img src="images/about-1.webp" alt="Hookah preparation" loading="lazy" /></div>
+          <div class="ph"><img src="images/about-1.webp" alt="Hookah preparation" loading="lazy" width="1100" height="1695" decoding="async" /></div>
           <h4 data-i18n="feat3.name">Mezze Board for Two</h4>
           <div class="fc-sub" data-i18n="feat3.sub">Hummus · olives · warm pita</div>
           <div class="fc-price">320 Kč</div>
         </div>
         <div class="feat-card">
-          <div class="ph"><img src="images/g1.webp" alt="Lounge sofas" loading="lazy" /></div>
+          <div class="ph"><img src="images/g1.webp" alt="Lounge sofas" loading="lazy" width="1100" height="1650" decoding="async" /></div>
           <h4 data-i18n="feat4.name">Moroccan Mint Tea</h4>
           <div class="fc-sub" data-i18n="feat4.sub">Gunpowder green · fresh mint</div>
           <div class="fc-price">130 Kč</div>
@@ -203,13 +222,13 @@
           </div>
         </div>
         <div class="field-row">
-          <div class="field"><label data-i18n="bk.lblDate">Date</label><input type="date" id="bk-date" /></div>
+          <div class="field"><label for="bk-date" data-i18n="bk.lblDate">Date</label><input type="date" id="bk-date" /></div>
           <div class="field">
-            <label data-i18n="bk.lblGuests">Guests</label>
-            <div class="guests">
-              <button type="button" id="gMinus">−</button>
-              <span class="gval" id="guestVal">2</span>
-              <button type="button" id="gPlus">+</button>
+            <label id="guestsLabel" data-i18n="bk.lblGuests">Guests</label>
+            <div class="guests" role="group" aria-labelledby="guestsLabel">
+              <button type="button" id="gMinus" aria-label="Fewer guests">−</button>
+              <span class="gval" id="guestVal" aria-live="polite">2</span>
+              <button type="button" id="gPlus" aria-label="More guests">+</button>
             </div>
           </div>
         </div>
@@ -247,12 +266,12 @@
       <div class="booking-step">
         <h3 data-i18n="bk.s3title">Your details</h3>
         <p class="step-sub" data-i18n="bk.s3sub">We&rsquo;ll send a confirmation — no spam, promise.</p>
-        <div class="field"><label data-i18n="bk.lblName">Full name</label><input type="text" id="bk-name" data-field="name" data-i18n-ph="bk.phName" placeholder="Jana Nováková" /></div>
+        <div class="field"><label for="bk-name" data-i18n="bk.lblName">Full name</label><input type="text" id="bk-name" data-field="name" data-i18n-ph="bk.phName" placeholder="Jana Nováková" /></div>
         <div class="field-row">
-          <div class="field"><label data-i18n="bk.lblEmail">Email</label><input type="email" id="bk-email" data-field="email" placeholder="you@email.com" /></div>
-          <div class="field"><label data-i18n="bk.lblPhone">Phone</label><input type="tel" id="bk-phone" data-field="phone" placeholder="+420 …" /></div>
+          <div class="field"><label for="bk-email" data-i18n="bk.lblEmail">Email</label><input type="email" id="bk-email" data-field="email" placeholder="you@email.com" /></div>
+          <div class="field"><label for="bk-phone" data-i18n="bk.lblPhone">Phone</label><input type="tel" id="bk-phone" data-field="phone" placeholder="+420 …" /></div>
         </div>
-        <div class="field"><label><span data-i18n="bk.lblRequests">Special requests</span> <span style="color:var(--muted-2)" data-i18n="bk.optional">(optional)</span></label><textarea id="bk-notes" data-field="notes" data-i18n-ph="bk.phNotes" placeholder="Allergies, occasion, flavour preferences…"></textarea></div>
+        <div class="field"><label for="bk-notes"><span data-i18n="bk.lblRequests">Special requests</span> <span style="color:var(--muted-2)" data-i18n="bk.optional">(optional)</span></label><textarea id="bk-notes" data-field="notes" data-i18n-ph="bk.phNotes" placeholder="Allergies, occasion, flavour preferences…"></textarea></div>
         <div class="booking-nav">
           <button class="btn-back" data-back data-i18n="bk.back">← Back</button>
           <div class="spacer"></div>
@@ -305,13 +324,13 @@
       <p class="lead" style="max-width:36ch;margin-bottom:6px" data-i18n="atm.intro">Low light, warm brick, soft leather and a haze of fruit smoke. Drop your own shots into the gallery.</p>
     </div>
     <div class="gallery reveal-stagger">
-      <button type="button" class="ph g-tall lb"><img src="images/about-1.webp" alt="Hookah preparation" loading="lazy" /><span class="lb-zoom">⤢</span></button>
-      <button type="button" class="ph g-wide lb"><img src="images/g2.webp" alt="The bar" loading="lazy" /><span class="lb-zoom">⤢</span></button>
-      <button type="button" class="ph lb"><img src="images/g3.webp" alt="Lounge atmosphere" loading="lazy" /><span class="lb-zoom">⤢</span></button>
-      <button type="button" class="ph lb"><img src="images/g1.webp" alt="Lounge sofas" loading="lazy" /><span class="lb-zoom">⤢</span></button>
-      <button type="button" class="ph g-wide lb"><img src="images/ev2.webp" alt="The brick cellar" loading="lazy" /><span class="lb-zoom">⤢</span></button>
-      <button type="button" class="ph g-wide lb"><img src="images/g1.webp" alt="Lounge sofas" loading="lazy" /><span class="lb-zoom">⤢</span></button>
-      <button type="button" class="ph g-wide lb"><img src="images/g3.webp" alt="Lounge atmosphere" loading="lazy" /><span class="lb-zoom">⤢</span></button>
+      <button type="button" class="ph g-tall lb"><img src="images/about-1.webp" alt="Hookah preparation" loading="lazy" width="1100" height="1695" decoding="async" /><span class="lb-zoom">⤢</span></button>
+      <button type="button" class="ph g-wide lb"><img src="images/g2.webp" alt="The bar" loading="lazy" width="1100" height="733" decoding="async" /><span class="lb-zoom">⤢</span></button>
+      <button type="button" class="ph lb"><img src="images/g3.webp" alt="Lounge atmosphere" loading="lazy" width="1100" height="1100" decoding="async" /><span class="lb-zoom">⤢</span></button>
+      <button type="button" class="ph lb"><img src="images/g1.webp" alt="Lounge sofas" loading="lazy" width="1100" height="1650" decoding="async" /><span class="lb-zoom">⤢</span></button>
+      <button type="button" class="ph g-wide lb"><img src="images/ev2.webp" alt="The brick cellar" loading="lazy" width="1100" height="825" decoding="async" /><span class="lb-zoom">⤢</span></button>
+      <button type="button" class="ph g-wide lb"><img src="images/g1.webp" alt="Lounge sofas" loading="lazy" width="1100" height="1650" decoding="async" /><span class="lb-zoom">⤢</span></button>
+      <button type="button" class="ph g-wide lb"><img src="images/g3.webp" alt="Lounge atmosphere" loading="lazy" width="1100" height="1100" decoding="async" /><span class="lb-zoom">⤢</span></button>
     </div>
   </div>
 </section>
@@ -328,19 +347,19 @@
         <div class="quote-mark">&rdquo;</div>
         <div class="stars">★★★★★</div>
         <p data-i18n="rev1.text">Best hookah in Prague, full stop. The signature blend is unreal and the cellar feels like a secret. We never want to leave.</p>
-        <div class="who"><div class="ph"><img src="images/g2.webp" alt="Tomáš H." loading="lazy" /></div><div><b>Tomáš H.</b><span data-i18n="rev1.meta">Local Guide · 2 weeks ago</span></div></div>
+        <div class="who"><div class="ph"><img src="images/g2.webp" alt="Tomáš H." loading="lazy" width="1100" height="733" decoding="async" /></div><div><b>Tomáš H.</b><span data-i18n="rev1.meta">Local Guide · 2 weeks ago</span></div></div>
       </div>
       <div class="review">
         <div class="quote-mark">&rdquo;</div>
         <div class="stars">★★★★★</div>
         <p data-i18n="rev2.text">Came for a birthday, stayed till close. Staff treated us like family, the cocktails were gorgeous and the smoke was smooth all night.</p>
-        <div class="who"><div class="ph"><img src="images/g3.webp" alt="Sofia R." loading="lazy" /></div><div><b>Sofia R.</b><span data-i18n="rev2.meta">Google review · 1 month ago</span></div></div>
+        <div class="who"><div class="ph"><img src="images/g3.webp" alt="Sofia R." loading="lazy" width="1100" height="1100" decoding="async" /></div><div><b>Sofia R.</b><span data-i18n="rev2.meta">Google review · 1 month ago</span></div></div>
       </div>
       <div class="review">
         <div class="quote-mark">&rdquo;</div>
         <div class="stars">★★★★★</div>
         <p data-i18n="rev3.text">My second living room. Great flavours, board games, comfy sofas and people who actually remember your order. Eight years strong.</p>
-        <div class="who"><div class="ph"><img src="images/g1.webp" alt="Marek D." loading="lazy" /></div><div><b>Marek D.</b><span data-i18n="rev3.meta">Regular · 3 weeks ago</span></div></div>
+        <div class="who"><div class="ph"><img src="images/g1.webp" alt="Marek D." loading="lazy" width="1100" height="1650" decoding="async" /></div><div><b>Marek D.</b><span data-i18n="rev3.meta">Regular · 3 weeks ago</span></div></div>
       </div>
     </div>
   </div>
@@ -358,25 +377,25 @@
     </div>
     <div class="events-grid reveal-stagger">
       <div class="event-card">
-        <div class="ph"><img src="images/g3.webp" alt="Lounge atmosphere" loading="lazy" /></div>
+        <div class="ph"><img src="images/g3.webp" alt="Lounge atmosphere" loading="lazy" width="1100" height="1100" decoding="async" /></div>
         <div class="ec-body">
-          <h4 data-i18n="ev1.title">Birthdays</h4>
+          <h3 class="ec-title" data-i18n="ev1.title">Birthdays</h3>
           <p data-i18n="ev1.text">Reserved sofas, a welcome round and the first hookah on us for the guest of honour.</p>
           <a href="#reserve" class="ec-link" data-i18n="ev1.link">Plan it ↗</a>
         </div>
       </div>
       <div class="event-card">
-        <div class="ph"><img src="images/ev2.webp" alt="Private cellar" loading="lazy" /></div>
+        <div class="ph"><img src="images/ev2.webp" alt="Private cellar" loading="lazy" width="1100" height="825" decoding="async" /></div>
         <div class="ec-body">
-          <h4 data-i18n="ev2.title">Private Cellar</h4>
+          <h3 class="ec-title" data-i18n="ev2.title">Private Cellar</h3>
           <p data-i18n="ev2.text">Book the brick room for up to 20 — your own bar, your own playlist, your own night.</p>
           <a href="#reserve" class="ec-link" data-i18n="ev2.link">Enquire ↗</a>
         </div>
       </div>
       <div class="event-card">
-        <div class="ph"><img src="images/g2.webp" alt="Bar & events" loading="lazy" /></div>
+        <div class="ph"><img src="images/g2.webp" alt="Bar & events" loading="lazy" width="1100" height="733" decoding="async" /></div>
         <div class="ec-body">
-          <h4 data-i18n="ev3.title">Game &amp; Quiz Nights</h4>
+          <h3 class="ec-title" data-i18n="ev3.title">Game &amp; Quiz Nights</h3>
           <p data-i18n="ev3.text">Weekly quizzes, board games and PS5 tournaments. New questions every single week.</p>
           <a href="#reserve" class="ec-link" data-i18n="ev3.link">Join in ↗</a>
         </div>
@@ -436,13 +455,15 @@
   </div>
 </section>
 
+</main>
+
 <!-- ===================== FOOTER ===================== -->
 <footer class="footer">
   <div class="wrap">
     <div class="footer-grid">
       <div class="f-brand">
         <a class="brand" href="#home" style="margin-bottom:18px">
-          <span class="brand-badge"><img src="images/logo-mark.png" alt="ShiShi Lounge logo" /></span>
+          <span class="brand-badge"><img src="images/logo-mark.png" alt="ShiShi Lounge logo" width="160" height="160" decoding="async" /></span>
           <span class="brand-name"><b>SHISHI</b><small>Lounge · Praha</small></span>
         </a>
         <p data-i18n="foot.tagline">Your second home for smoke, slow nights and good company in the heart of Prague.</p>
@@ -451,20 +472,20 @@
         </div>
       </div>
       <div>
-        <h5 data-i18n="foot.explore">Explore</h5>
+        <h3 class="f-h" data-i18n="foot.explore">Explore</h3>
         <a href="#about" data-i18n="nav.about">About</a>
         <a href="#menu" data-i18n="nav.menu">Menu</a>
         <a href="#atmosphere" data-i18n="nav.atmosphere">Atmosphere</a>
         <a href="#events" data-i18n="nav.events">Events</a>
       </div>
       <div>
-        <h5 data-i18n="foot.visit">Visit</h5>
+        <h3 class="f-h" data-i18n="foot.visit">Visit</h3>
         <a href="#reserve" data-i18n="nav.reserveBtn">Reserve a table</a>
         <a href="#contact" data-i18n="foot.findus">Find us</a>
         <p>Malá Štěpánská 19<br />Praha 2</p>
       </div>
       <div>
-        <h5 data-i18n="foot.hours">Hours</h5>
+        <h3 class="f-h" data-i18n="foot.hours">Hours</h3>
         <p data-i18n="foot.h1">Sun–Thu · 2 PM – 1 AM</p>
         <p data-i18n="foot.h2">Fri–Sat · 2 PM – 2 AM</p>
         <p>+420 777 123 456</p>
@@ -487,7 +508,7 @@
 </div>
 
 <!-- ===================== LIGHTBOX ===================== -->
-<div class="lightbox" id="lightbox" aria-hidden="true">
+<div class="lightbox" id="lightbox" aria-hidden="true" inert>
   <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
   <button class="lb-nav prev" id="lbPrev" aria-label="Previous">‹</button>
   <button class="lb-nav next" id="lbNext" aria-label="Next">›</button>
@@ -499,9 +520,9 @@
 </div>
 
 <!-- ===================== SCRIPTS ===================== -->
-<script src="hero.js?v=5"></script>
-<script src="i18n.js?v=11"></script>
-<script src="particles.js?v=5"></script>
-<script src="site.js?v=11"></script>
+<script src="hero.js?v=6" defer></script>
+<script src="i18n.js?v=11" defer></script>
+<script src="particles.js?v=6" defer></script>
+<script src="site.js?v=12" defer></script>
 </body>
 </html>

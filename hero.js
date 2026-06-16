@@ -10,10 +10,10 @@
   const centerEl = stage.parentElement.querySelector('.hero-centerpiece');
 
   const F = {
-    orange: 'images/orange.png',
-    kiwi: 'images/kiwi.png',
-    pineapple: 'images/pineapple.png',
-    charcoal: 'images/charcoal.png',
+    orange: 'images/orange.webp',
+    kiwi: 'images/kiwi.webp',
+    pineapple: 'images/pineapple.webp',
+    charcoal: 'images/charcoal.webp',
   };
 
   const SCATTER = [

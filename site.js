@@ -56,14 +56,17 @@
   const burger = document.querySelector('.burger');
   const mobile = document.querySelector('.mobile-menu');
   if (burger) {
-    burger.addEventListener('click', () => {
-      const open = mobile.classList.toggle('open');
+    if (mobile) mobile.setAttribute('inert', '');           // hidden links out of tab order
+    burger.setAttribute('aria-expanded', 'false');
+    const setMenu = (open) => {
+      mobile.classList.toggle('open', open);
       burger.classList.toggle('x', open);
+      burger.setAttribute('aria-expanded', String(open));
+      if (open) mobile.removeAttribute('inert'); else mobile.setAttribute('inert', '');
       document.body.style.overflow = open ? 'hidden' : '';
-    });
-    mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      mobile.classList.remove('open'); burger.classList.remove('x'); document.body.style.overflow = '';
-    }));
+    };
+    burger.addEventListener('click', () => setMenu(!mobile.classList.contains('open')));
+    mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
   }
 
   /* ---------- SMOKE (continuous wavy plume) ---------- */
@@ -360,11 +363,14 @@
     }
     function open(i) {
       idx = i; render();
+      lb.removeAttribute('inert');
       lb.classList.add('open'); lb.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
     }
     function close() {
       lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true');
+      // inert removes the close/prev/next buttons from the tab order while hidden
+      lb.setAttribute('inert', '');
       document.body.style.overflow = '';
     }
     function go(d) { idx = (idx + d + items.length) % items.length; render(); }

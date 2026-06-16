@@ -6,7 +6,7 @@
   const layer = document.getElementById('particles');
   if (!layer) return;
 
-  const POOL = ['images/orange.png', 'images/kiwi.png', 'images/pineapple.png', 'images/charcoal.png', 'images/charcoal.png'];
+  const POOL = ['images/orange.webp', 'images/kiwi.webp', 'images/pineapple.webp', 'images/charcoal.webp', 'images/charcoal.webp'];
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let parts = [];        // global floaters
@@ -78,8 +78,15 @@
   };
 
   window.addEventListener('scroll', onScroll, { passive: true });
-  let rt;
-  window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(rebuild, 300); });
+  // Only rebuild when the viewport WIDTH actually changes. Mobile browsers fire
+  // 'resize' on every scroll as the address bar hides/shows (height-only change);
+  // rebuilding there wiped + recreated all particles, which read as flicker.
+  let rt, lastW = window.innerWidth;
+  window.addEventListener('resize', () => {
+    if (Math.abs(window.innerWidth - lastW) < 40) return;
+    lastW = window.innerWidth;
+    clearTimeout(rt); rt = setTimeout(rebuild, 300);
+  });
 
   if (document.readyState === 'complete') setTimeout(rebuild, 120);
   else window.addEventListener('load', () => setTimeout(rebuild, 120));
