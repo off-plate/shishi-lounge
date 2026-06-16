@@ -314,6 +314,9 @@ section { position: relative; z-index: 2; }
   display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
 }
 
+/* mobile-only stacked wordmark (hidden on desktop; the split row is used there) */
+.wm-mobile { display: none; }
+
 /* --- split wordmark row --- */
 .wordmark-row {
   display: grid;
@@ -466,13 +469,32 @@ body[data-hero="split"] .wm-half.right { justify-self: start; }
   .wm-half { font-size: clamp(60px, 16vw, 150px); }
 }
 @media (max-width: 680px) {
-  /* stack the wordmark vertically: SHI / hookah / SHI */
-  .wordmark-row { grid-template-columns: 1fr; row-gap: 4px; }
-  .wm-half { font-size: clamp(64px, 24vw, 150px); line-height: 0.9; }
-  .wm-half.left  { justify-self: center; margin: 0; }
-  .wm-half.right { justify-self: center; margin: 0; }
-  .wm-script { position: static; display: block; transform: rotate(-7deg); font-size: 0.36em; margin-top: 0.02em; }
-  .hero-centerpiece { width: min(64vw, 280px); margin: 4px auto; }
+  /* hero fills one screen: wordmark at top, hookah in the middle, CTAs at the bottom */
+  .hero { padding-top: clamp(82px, 13vh, 116px); padding-bottom: clamp(22px, 4vh, 38px); }
+  .hero-inner { justify-content: space-between; }
+
+  /* use the stacked "ShiShi / Lounge" wordmark; drop the split SHI · SHI halves */
+  .wm-half { display: none; }
+  .wm-mobile { display: flex; flex-direction: column; align-items: center; line-height: .88; }
+  .wmm-name {
+    font-family: 'Playfair Display', serif; font-weight: 800;
+    font-size: clamp(54px, 17vw, 98px); letter-spacing: .01em; color: #fdf8f0;
+    text-shadow: 0 6px 30px rgba(0,0,0,.55), 0 2px 4px rgba(0,0,0,.4);
+  }
+  .wmm-script {
+    font-family: var(--font-script); font-weight: 400; color: var(--gold);
+    font-size: clamp(30px, 10vw, 54px); transform: rotate(-6deg); margin-top: .04em;
+    text-shadow: 0 4px 16px rgba(226,112,58,.5);
+  }
+
+  /* wordmark-row now only holds the hookah */
+  .wordmark-row { display: block; width: auto; }
+  .hero-centerpiece { width: min(60vw, 260px); margin: 0 auto; }
+
+  /* both CTAs side by side under the hookah */
+  .hero-cta { margin: 0; gap: 10px; flex-wrap: nowrap; width: 100%; }
+  .hero-cta .btn { flex: 1 1 0; min-width: 0; justify-content: center; padding: 14px 10px; font-size: clamp(12px, 3.3vw, 14px); gap: 6px; letter-spacing: .02em; }
+
   .hero-tagline { font-size: 11px; letter-spacing: 0.32em; }
   /* thin out the scatter so the small screen isn't cluttered (scale handled in JS) */
   .hero-scatter .piece:nth-child(even) { display: none; }
